@@ -52,11 +52,54 @@ nav {
   height: 89vh;
   overflow: scroll;
   gap: 20px;
+  cursor: pointer;
   .movie {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
     img {
       height: 100%;
       object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
+    .movieTitle {
+      color: white;
+      width: 185px;
+      margin-top: 5px;
+    }
+  }
+}
+.movieOverview {
+  background-color: #000000d1;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 102vh;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+  }
+  .movieTitle {
+    color: white;
+  }
+  .movieOverviewText {
+    color: white;
+    width: 416px;
+    text-align: justify;
+  }
+  .closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
   }
 }
 
@@ -68,6 +111,7 @@ nav {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+  transform: scale(1.05);
 }
 
 /* Handle */
